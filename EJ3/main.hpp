@@ -5,7 +5,7 @@
 #include "../EJ1/Headers/Personajes/InterfazPersonajes.hpp"
 
 // Opciones de combate
-enum class EstiloGolpe { PESADO, VELOZ, CONTRAATAQUE };
+enum class EstiloGolpe { GOLPE_FUERTE, GOLPE_RAPIDO, DEFENZA_Y_GOLPE };
 
 // Declaración de funciones del simulador
 bool entradaCorrecta();

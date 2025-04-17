@@ -48,7 +48,7 @@ void menuArmas() {
 }
 
 void menuGolpes() {
-    cout << "(0) Golpe Pesado | (1) Golpe Veloz | (2) Defensa Reactiva\n";
+    cout << "(0) Golpe Fuerte | (1) Golpe Rapido | (2) Defenza y Golpe\n";
 }
 
 EstiloGolpe elegirGolpe() {
@@ -69,9 +69,9 @@ EstiloGolpe golpeAleatorioCPU() {
 
 string descripcionGolpe(EstiloGolpe golpe) {
     switch (golpe) {
-        case EstiloGolpe::PESADO: return "Golpe Pesado";
-        case EstiloGolpe::VELOZ: return "Golpe Veloz";
-        case EstiloGolpe::CONTRAATAQUE: return "Defensa Reactiva";
+        case EstiloGolpe::GOLPE_FUERTE: return "Golpe Fuerte";
+        case EstiloGolpe::GOLPE_RAPIDO: return "Golpe Rapido";
+        case EstiloGolpe::DEFENZA_Y_GOLPE: return "Contraaque";
         default: return "???";
     }
 }
@@ -165,7 +165,7 @@ void ejecutarCombate(shared_ptr<InterfazDePersonaje>& pj1, shared_ptr<InterfazDe
 int main() {
     srand(time(0));
     limpiarPantalla();
-    cout << "=== SIMULADOR DE COMBATE FANTÁSTICO ===\n";
+    cout << "=== SIMULADOR DE COMBATE ===\n";
 
     // Elección del jugador
     int idxPj = elegirPersonaje();
